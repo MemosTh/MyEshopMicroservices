@@ -25,10 +25,6 @@ internal class CreateProductCommandHandler(IDocumentSession session)
             Price = command.Price
         };
 
-        // TODO
-        //save to database
-
-
         try
         {
             session.Store(product);

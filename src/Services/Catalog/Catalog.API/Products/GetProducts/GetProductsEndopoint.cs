@@ -1,5 +1,4 @@
-﻿using Catalog.API.Products.CreateProduct;
-
+﻿
 namespace Catalog.API.Products.GetProducts;
 
 
@@ -22,10 +21,10 @@ public class GetProductsEndpoint : ICarterModule
 
             return Results.Ok(response);
         })
-        .WithName("GetProducts")
+        .WithName("GetProductById")
         .Produces<GetProductsResponse>(StatusCodes.Status200OK)
         .ProducesProblem(StatusCodes.Status400BadRequest)
-        .WithSummary("Get Products")
-        .WithDescription("Get Products");
+        .WithSummary("Get Product by id")
+        .WithDescription("Get Products by id");
     }
 }
