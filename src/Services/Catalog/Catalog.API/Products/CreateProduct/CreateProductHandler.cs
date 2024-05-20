@@ -31,7 +31,7 @@ internal class CreateProductCommandHandler(IDocumentSession session)
             await session.SaveChangesAsync(cancellationToken);
 
         }
-        catch (Exception ex)
+        catch (Exception )
         {
 
             throw;
