@@ -11,7 +11,7 @@ internal class GetProductsQueryHandler
 {
     public async Task<GetProductsResult> Handle(GetProductsQuery query, CancellationToken cancellationToken)
     {
-        var products = await session.Query<Product>()
+         var products = await session.Query<Product>()
             .ToPagedListAsync(query.PageNumber ?? 1, query.PageSize ?? 10, cancellationToken);
 
         return new GetProductsResult(products);
